@@ -1,0 +1,342 @@
+{"Watchlist" : [
+	{
+		"NAME": "INFY",
+		"CMP": "1,480.25",
+		"CHANGE_PCT": "0.87",
+		"CHANGE": "12.80"
+	},
+	{
+		"NAME": "RELIANCE",
+		"CMP": "2,175.50",
+		"CHANGE_PCT": "-0.65",
+		"CHANGE": "-14.20"
+	},
+	{
+		"NAME": "TCS",
+		"CMP": "3,050.75",
+		"CHANGE_PCT": "1.23",
+		"CHANGE": "37.40"
+	},
+	{
+		"NAME": "ICICIBANK",
+		"CMP": "650.40",
+		"CHANGE_PCT": "0.32",
+		"CHANGE": "2.10"
+	},
+	{
+		"NAME": "HDFCBANK",
+		"CMP": "1,560.10",
+		"CHANGE_PCT": "-1.12",
+		"CHANGE": "-17.60"
+	},
+	{
+		"NAME": "HINDUNILVR",
+		"CMP": "2,485.60",
+		"CHANGE_PCT": "0.75",
+		"CHANGE": "18.60"
+	},
+	{
+		"NAME": "AXISBANK",
+		"CMP": "720.90",
+		"CHANGE_PCT": "-0.43",
+		"CHANGE": "-3.10"
+	},
+	{
+		"NAME": "SBIN",
+		"CMP": "300.80",
+		"CHANGE_PCT": "2.10",
+		"CHANGE": "6.20"
+	},
+	{
+		"NAME": "BAJFINANCE",
+		"CMP": "6,210.30",
+		"CHANGE_PCT": "0.98",
+		"CHANGE": "60.50"
+	},
+	{
+		"NAME": "TATASTEEL",
+		"CMP": "1,200.60",
+		"CHANGE_PCT": "-0.20",
+		"CHANGE": "-2.40"
+	},
+	{
+		"NAME": "MARUTI",
+		"CMP": "7,150.20",
+		"CHANGE_PCT": "0.55",
+		"CHANGE": "39.30"
+	},
+	{
+		"NAME": "COALINDIA",
+		"CMP": "160.90",
+		"CHANGE_PCT": "1.67",
+		"CHANGE": "2.65"
+	},
+	{
+		"NAME": "ONGC",
+		"CMP": "120.75",
+		"CHANGE_PCT": "-0.75",
+		"CHANGE": "-0.90"
+	},
+	{
+		"NAME": "POWERGRID",
+		"CMP": "225.30",
+		"CHANGE_PCT": "1.23",
+		"CHANGE": "2.75"
+	},
+	{
+		"NAME": "ULTRACEMCO",
+		"CMP": "6,500.40",
+		"CHANGE_PCT": "-0.45",
+		"CHANGE": "-29.50"
+	},
+	{
+		"NAME": "BHARTIARTL",
+		"CMP": "700.30",
+		"CHANGE_PCT": "0.20",
+		"CHANGE": "1.40"
+	},
+	{
+		"NAME": "TECHM",
+		"CMP": "1,050.90",
+		"CHANGE_PCT": "-0.32",
+		"CHANGE": "-3.40"
+	},
+	{
+		"NAME": "NESTLEIND",
+		"CMP": "18,210.80",
+		"CHANGE_PCT": "0.78",
+		"CHANGE": "141.60"
+	},
+	{
+		"NAME": "SUNPHARMA",
+		"CMP": "860.50",
+		"CHANGE_PCT": "0.92",
+		"CHANGE": "7.80"
+	},
+	{
+		"NAME": "WIPRO",
+		"CMP": "450.20",
+		"CHANGE_PCT": "-0.20",
+		"CHANGE": "-0.90"
+	}
+],
+
+"Indices" : [
+	{
+		"NAME": "NIFTY50",
+		"CMP": "18,250.30",
+		"CHANGE_PCT": "0.65",
+		"CHANGE": "118.50"
+	},
+	{
+		"NAME": "BANKNIFTY",
+		"CMP": "38,750.80",
+		"CHANGE_PCT": "-0.32",
+		"CHANGE": "-124.90"
+	},
+	{
+		"NAME": "NIFTY IT",
+		"CMP": "30,500.60",
+		"CHANGE_PCT": "1.20",
+		"CHANGE": "365.80"
+	},
+	{
+		"NAME": "NIFTY METAL",
+		"CMP": "5,200.45",
+		"CHANGE_PCT": "-0.80",
+		"CHANGE": "-42.10"
+	},
+	{
+		"NAME": "NIFTY SMCG",
+		"CMP": "8,500.20",
+		"CHANGE_PCT": "0.40",
+		"CHANGE": "34.20"
+	},
+	{
+		"NAME": "NIFTY AUTO",
+		"CMP": "10,300.70",
+		"CHANGE_PCT": "0.90",
+		"CHANGE": "91.40"
+	},
+	{
+		"NAME": "NIFTY PHARMA",
+		"CMP": "12,400.90",
+		"CHANGE_PCT": "-0.20",
+		"CHANGE": "-25.30"
+	},
+	{
+		"NAME": "NIFTY ENERGY",
+		"CMP": "6,500.20",
+		"CHANGE_PCT": "0.55",
+		"CHANGE": "35.60"
+	},
+	{
+		"NAME": "NIFTY MEDIA",
+		"CMP": "2,400.30",
+		"CHANGE_PCT": "1.75",
+		"CHANGE": "41.80"
+	},
+	{
+		"NAME": "NIFTY REALTY",
+		"CMP": "500.60",
+		"CHANGE_PCT": "-0.90",
+		"CHANGE": "-4.60"
+	}
+],
+
+"Nifty50" : [
+	{
+		"NAME": "NESTLEIND",
+		"CMP": "18,210.80",
+		"CHANGE_PCT": "0.78",
+		"CHANGE": "141.60"
+	},
+	{
+		"NAME": "SUNPHARMA",
+		"CMP": "860.50",
+		"CHANGE_PCT": "0.92",
+		"CHANGE": "7.80"
+	},
+	{
+		"NAME": "WIPRO",
+		"CMP": "450.20",
+		"CHANGE_PCT": "-0.20",
+		"CHANGE": "-0.90"
+	},
+	{
+		"NAME": "INFY",
+		"CMP": "1,480.25",
+		"CHANGE_PCT": "0.87",
+		"CHANGE": "12.80"
+	},
+	{
+		"NAME": "RELIANCE",
+		"CMP": "2,175.50",
+		"CHANGE_PCT": "-0.65",
+		"CHANGE": "-14.20"
+	},
+
+	{
+		"NAME": "HINDUNILVR",
+		"CMP": "2,485.60",
+		"CHANGE_PCT": "0.75",
+		"CHANGE": "18.60"
+	},
+	{
+		"NAME": "AXISBANK",
+		"CMP": "720.90",
+		"CHANGE_PCT": "-0.43",
+		"CHANGE": "-3.10"
+	},
+	{
+		"NAME": "SBIN",
+		"CMP": "300.80",
+		"CHANGE_PCT": "2.10",
+		"CHANGE": "6.20"
+	},
+	{
+		"NAME": "BAJFINANCE",
+		"CMP": "6,210.30",
+		"CHANGE_PCT": "0.98",
+		"CHANGE": "60.50"
+	},
+	{
+		"NAME": "TATASTEEL",
+		"CMP": "1,200.60",
+		"CHANGE_PCT": "-0.20",
+		"CHANGE": "-2.40"
+	},
+	{
+		"NAME": "MARUTI",
+		"CMP": "7,150.20",
+		"CHANGE_PCT": "0.55",
+		"CHANGE": "39.30"
+	},
+	{
+		"NAME": "COALINDIA",
+		"CMP": "160.90",
+		"CHANGE_PCT": "1.67",
+		"CHANGE": "2.65"
+	},
+	{
+		"NAME": "TCS",
+		"CMP": "3,050.75",
+		"CHANGE_PCT": "1.23",
+		"CHANGE": "37.40"
+	},
+	{
+		"NAME": "ICICIBANK",
+		"CMP": "650.40",
+		"CHANGE_PCT": "0.32",
+		"CHANGE": "2.10"
+	},
+	{
+		"NAME": "HDFCBANK",
+		"CMP": "1,560.10",
+		"CHANGE_PCT": "-1.12",
+		"CHANGE": "-17.60"
+	},
+	{
+		"NAME": "ONGC",
+		"CMP": "120.75",
+		"CHANGE_PCT": "-0.75",
+		"CHANGE": "-0.90"
+	},
+	{
+		"NAME": "POWERGRID",
+		"CMP": "225.30",
+		"CHANGE_PCT": "1.23",
+		"CHANGE": "2.75"
+	},
+	{
+		"NAME": "ULTRACEMCO",
+		"CMP": "6,500.40",
+		"CHANGE_PCT": "-0.45",
+		"CHANGE": "-29.50"
+	},
+	{
+		"NAME": "BHARTIARTL",
+		"CMP": "700.30",
+		"CHANGE_PCT": "0.20",
+		"CHANGE": "1.40"
+	},
+	{
+		"NAME": "TECHM",
+		"CMP": "1,050.90",
+		"CHANGE_PCT": "-0.32",
+		"CHANGE": "-3.40"
+	}
+],
+
+"NiftyNext50" : [
+	{
+		"NAME": "NIFTY AUTO",
+		"CMP": "10,300.70",
+		"CHANGE_PCT": "0.90",
+		"CHANGE": "91.40"
+	},
+	{
+		"NAME": "NIFTY PHARMA",
+		"CMP": "12,400.90",
+		"CHANGE_PCT": "-0.20",
+		"CHANGE": "-25.30"
+	},
+	{
+		"NAME": "NIFTY ENERGY",
+		"CMP": "6,500.20",
+		"CHANGE_PCT": "0.55",
+		"CHANGE": "35.60"
+	},
+	{
+		"NAME": "NIFTY MEDIA",
+		"CMP": "2,400.30",
+		"CHANGE_PCT": "1.75",
+		"CHANGE": "41.80"
+	},
+	{
+		"NAME": "NIFTY REALTY",
+		"CMP": "500.60",
+		"CHANGE_PCT": "-0.90",
+		"CHANGE": "-4.60"
+	}
+]}
