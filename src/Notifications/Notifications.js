@@ -12,13 +12,11 @@ const Notifications = () => {
     
     useEffect(() => {
         // Establish WebSocket connection when component mounts
-        WebSocketService.connect('wss://smalblu-frontend.onrender.com:10000/ws', handleWebSocketMessage);
+        const disconnect = useWebSocket('wss://smalblu-frontend.onrender.com:10000/ws', handleWebSocketMessage);
     
         // Cleanup: Close WebSocket connection when component unmounts
-        return () => {
-          WebSocketService.disconnect();
-        };
-      }, []);
+        return disconnect;
+    }, []);
     
       const handleWebSocketMessage = (message) => {
         const newNotification = JSON.parse(message);
