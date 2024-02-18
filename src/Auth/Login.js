@@ -19,7 +19,7 @@ const Login = ({ }) => {
   }
 
   const onSubmitSignIn = () => {
-    fetch('http://127.0.0.1:5000/login', {
+    fetch('https://smalblu-backend.onrender.com/login', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -37,7 +37,7 @@ const Login = ({ }) => {
         Properties.username = userData.user.username;
         Properties.email = userData.user.email;
 
-          fetch('http://127.0.0.1:5000/notifications-count',{
+          fetch('https://smalblu-backend.onrender.com/notifications-count',{
             method: 'get',
             headers: { 'Content-Type': 'application/json' },
           }).then(response => response.json())

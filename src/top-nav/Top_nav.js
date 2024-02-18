@@ -12,7 +12,7 @@ const Top_nav = ( { newNotifications } ) => {
     const navigate = useNavigate();
 
     const handleClick = async () => {
-        await fetch('http://localhost:5000/update',{
+        await fetch('https://smalblu-backend.onrender.com/update',{
             method: 'PUT',
             headers: {'Content-Type': 'application/json'},
             

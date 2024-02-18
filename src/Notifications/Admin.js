@@ -11,7 +11,7 @@ const SendNotification = () => {
       }
 
     const onSubmitNotification = () => {
-        fetch('http://127.0.0.1:5000/admin', {
+        fetch('https://smalblu-backend.onrender.com/admin', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
