@@ -12,7 +12,7 @@ const Notifications = () => {
     
     useEffect(() => {
         // Establish WebSocket connection when component mounts
-        const disconnect = useWebSocket('wss://smalblu-frontend.onrender.com:10000/ws', handleWebSocketMessage);
+        const disconnect = WebSocketService('wss://smalblu-frontend.onrender.com:10000/ws', handleWebSocketMessage);
     
         // Cleanup: Close WebSocket connection when component unmounts
         return disconnect;
