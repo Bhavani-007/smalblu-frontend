@@ -5,13 +5,15 @@ const SendNotification = () => {
 
     const [text, setText] = useState('');
     const [adminMessage,setAdminMessage] = useState('');
+    
 
     const onTextChange = (event) => {
         setText(event.target.value);
+        setAdminMessage('');
       }
 
     const onSubmitNotification = () => {
-        fetch('https://smalblu-backend.onrender.com/admin', {
+        fetch('http://127.0.0.1:5000/admin', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -20,6 +22,8 @@ const SendNotification = () => {
       })
     }).then(response => response.json())
       .then(notificationSent => {
+        if(notificationSent.success)
+          setText('')
         setAdminMessage(notificationSent.message);
         
       }).catch(console.log)

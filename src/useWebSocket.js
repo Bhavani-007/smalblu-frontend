@@ -32,20 +32,18 @@ const WebSocketService = (url, onMessageCallback) => {
       ws.removeEventListener('message', handleMessage);
       ws.removeEventListener('close', handleClose);
 
-      if (ws.readyState !== WebSocket.CLOSED) {
-        ws.close();
-      }
+      
     };
   }, [url, onMessageCallback]);
 
   // Return disconnect function for cleanup
-  const disconnect = () => {
+  /*const disconnect = () => {
     if (wsRef.current && wsRef.current.readyState !== WebSocket.CLOSED) {
       wsRef.current.close();
     }
   };
 
-  return disconnect;
+  return disconnect;*/
 };
 
 export default WebSocketService;

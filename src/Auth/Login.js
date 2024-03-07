@@ -1,8 +1,10 @@
+
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 import './Auth.css';
-import { Properties } from '../properties';
+
+import axios from 'axios';
 
 const Login = ({ }) => {
     const navigate = useNavigate(); 
@@ -18,67 +20,46 @@ const Login = ({ }) => {
     setLogInPassword(event.target.value);
   }
 
-  const onSubmitSignIn = () => {
-    fetch('https://smalblu-backend.onrender.com/login', {
-      method: 'post',
+
+
+const onSubmitSignIn = async () => {
+  try {
+    // Login request
+    const loginResponse = await axios.post('http://127.0.0.1:5000/login', {
+      email: logInEmail,
+      password: logInPassword,
+    }, {
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email: logInEmail,
-        password: logInPassword,
-      })
-    }).then(response => response.json())
-      .then(userData => {
-        //const user_notifications_count = userData.user.notification_count;
+      withCredentials: true
+    });
+
+    const userData = loginResponse.data;
+
+    if (userData.success) {
+      
+      sessionStorage.setItem('username',userData.user.username)
+      sessionStorage.setItem('isLoggedIn',true);
+      
+      if(localStorage.getItem('email')!==userData.user.email) {
+        localStorage.clear();
+        localStorage.setItem('email',userData.user.email)
+        localStorage.setItem('user_notifications_count',userData.user.notification_count)
+      }
         
+      console.log('login resulting values are set')
 
-        if (userData.success) {
-          
-          Properties.user_notifications_count = userData.user.notification_count;
-        Properties.username = userData.user.username;
-        Properties.email = userData.user.email;
-
-          fetch('https://smalblu-backend.onrender.com/notifications-count',{
-            method: 'get',
-            headers: { 'Content-Type': 'application/json' },
-          }).then(response => response.json())
-          .then(data => {
-            if(data.success){
-
-              Properties.updated_notifications_count = data.count;
-
-              if (Properties.updated_notifications_count > Properties.user_notifications_count){
-                Properties.is_new_notifications = true;
-                console.log("notifications count increased")
-                console.log('notif count: '+Properties.updated_notifications_count)
-                console.log('user count : '+Properties.user_notifications_count)
-                console.log("is New Notifications: "+Properties.is_new_notifications);
-                navigate('/',{state:{newNotifications: true}})
-                //navigate('/',{state:{isLoggedIn:true, username:userData.user.username, email: userData.user.email, newNotifications:true, notif_count:data.count}}); // Navigate to the home page
-                
-              } else {
-                console.log("notifications count is same")
-                navigate('/',{state:{newNotifications: false}})
-              //navigate('/',{state:{isLoggedIn:true, username:userData.user.username, newNotifications:false}});
-              }
-            } else {
-              console.log("notifications count is same")
-              navigate('/',{state:{newNotifications: false}})
-              //navigate('/',{state:{isLoggedIn:true, username:userData.user.username, newNotifications:false}});
-            }
-          }) 
-          Properties.on_home_page = true 
-          Properties.is_logged_in = true;
-          //navigate('/')
-        } else {
-          // Handle login failure
-          //navigate('/',{state:{isLoggedIn:false}})
-          
-          setErrorMessage(userData.message);
-          setlogInEmail('');
-          setLogInPassword('');
-        }
-      }).catch(console.log)
+    navigate('/')
+      
+    } else {
+      setErrorMessage(userData.message);
+      setlogInEmail('');
+      setLogInPassword('');
+    }
+  } catch (error) {
+    console.error(error);
   }
+};
+
 
   return (
     <div>

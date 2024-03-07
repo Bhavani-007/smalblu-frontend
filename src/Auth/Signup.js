@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import './Auth.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios'; // Import Axios library
 
-
-const SignUp = ({ }) => {
+const SignUp = () => {
   const navigate = useNavigate(); 
   const [signupUsername, setSignupUsername] = useState('');
   const [signupEmail, setSignupEmail] = useState('');
@@ -23,34 +23,37 @@ const SignUp = ({ }) => {
   const onPasswordChange = (event) => {
     setSignupPassword(event.target.value);
   }
+ 
 
-  const onSubmitRegister = () => {
-    fetch('https://smalblu-backend.onrender.com/signup', {
-      method: 'post',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        email: signupEmail,
-        username: signupUsername,
-        password: signupPassword,
-         
-      })
-    }).then(response => response.json())
-      .then(userData => {
-        if (userData.success) {
-          setSuccessMessage(userData.message);
-          setTimeout(() => {
-            navigate('/'); // Navigate to the home page after 1.5 second
-          }, 1500);
-        }
-        else{
-          setSignupUsername('')
-          setSignupEmail('');
-          setSignupPassword('');
-          setErrorMessage(userData.message);
-        } 
-        
-      }).catch(console.log)
+const onSubmitRegister = async () => { // Define onSubmitRegister as an async function
+  try {
+    const response = await axios.post('http://127.0.0.1:5000/signup', {
+      email: signupEmail,
+      username: signupUsername,
+      password: signupPassword,
+    }, {
+      headers: { 'Content-Type': 'application/json' }, // Set request headers
+      withCredentials: true,
+    });
+
+    const userData = response.data; // Extract data from response
+
+    if (userData.success) {
+      setSuccessMessage(userData.message);
+      setTimeout(() => {
+        navigate('/'); // Navigate to the home page after 1.5 seconds
+      }, 1500);
+    } else {
+      setSignupUsername('');
+      setSignupEmail('');
+      setSignupPassword('');
+      setErrorMessage(userData.message);
+    }
+  } catch (error) {
+    console.error(error); // Log any errors to the console
   }
+};
+
 
   return (
     <div>
