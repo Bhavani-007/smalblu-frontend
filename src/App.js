@@ -39,7 +39,7 @@ const App = () => {
                 }
                 console.log('is new notifications: ',isNewNotifications)
 
-                //if user is already on notifications page, update the user-notifications count
+                //if user is already on notifications page, update the user-notifications count without setting bell-icon to red.
                 if(sessionStorage.getItem('on_notifications_page')==='true') {
                     console.log('onNotificationsPage')
                     setIsOnNotificationsPage(prevIsOnNotificationsPage => !prevIsOnNotificationsPage);
@@ -58,7 +58,6 @@ const App = () => {
       }
     };
 
-    
       // Initial fetch
       fetchNotifications();
 
