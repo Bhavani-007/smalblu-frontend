@@ -23,24 +23,25 @@ const App = () => {
       try {
         const response = await fetch('http://127.0.0.1:5000/notifications');
         const data = await response.json();
-        if(data.success) {
+        if(data.success) {          //if notifications fetched successfully
           setNotificationsArray(data.notifications);
           if(sessionStorage.getItem('updated_notifications_count') === null) {
             sessionStorage.setItem('updated_notifications_count',data.count)
           } else {
-            if (sessionStorage.getItem('isLoggedIn') === 'true') {
+            if (sessionStorage.getItem('isLoggedIn') === 'true') {   
+              //check if notification count increased in the current fetch
               if((parseInt(data.count) > parseInt(sessionStorage.getItem('updated_notifications_count')) ) || ( (sessionStorage.getItem('updated_notifications_count')) > parseInt(localStorage.getItem('user_notifications_count')))) {
                 console.log('true');
                 sessionStorage.setItem('updated_notifications_count',data.count)
-                //setIsNewNotifications(true);
-                 if (sessionStorage.getItem('on_notifications_page')===null)  {
+                //if user is not on notfications page, set the red marked bell icon
+                if (sessionStorage.getItem('on_notifications_page')===null)  {
                   setIsNewNotifications(prevIsNewNotifications => !prevIsNewNotifications)
-                 }
-                 
+                }
                 console.log('is new notifications: ',isNewNotifications)
+
+                //if user is already on notifications page, update the user-notifications count
                 if(sessionStorage.getItem('on_notifications_page')==='true') {
                     console.log('onNotificationsPage')
-                    //setIsOnNotificationsPage(!isOnNotificationsPage);
                     setIsOnNotificationsPage(prevIsOnNotificationsPage => !prevIsOnNotificationsPage);
                     console.log(isOnNotificationsPage)
                       
@@ -70,7 +71,6 @@ const App = () => {
   },[])
 
   
-
   return (
     <div>
       <BrowserRouter>
@@ -80,10 +80,8 @@ const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/notifications' element={<><Navbar isNewNotifications={isNewNotifications} /><Notifications array={notificationsArray} onNotificationsPage={isOnNotificationsPage}/></>} />
           <Route path='/admin' element={<SendNotification />} />
-          
         </Routes>
-      </BrowserRouter>
-      
+      </BrowserRouter> 
     </div>
   
   );
