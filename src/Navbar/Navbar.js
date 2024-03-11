@@ -1,18 +1,14 @@
 
 import React, { useEffect, useState } from "react";
 import logo from '../quantblu-logo.png';
-import { useLocation } from "react-router-dom";
 import zero_notif from '../zero-Notifications-png.png'
 import new_notifications from '../new-notifications-png.png';
 import profile from '../profile.svg'
 import { Link, useNavigate } from "react-router-dom";
-import { useCookies } from "react-cookie";
-import axios from "axios";
 import './Navbar.css'
 
 const Navbar = (props) => {
     const navigate = useNavigate();
-    const [cookies, removeCookie] = useCookies([]); 
     const [isNewNotifications, setIsNewNotifications] = useState(false);
     const [initialRender, setInitialRender] = useState(true);
 
@@ -36,7 +32,7 @@ const Navbar = (props) => {
     }
     
     const handleLogoutClick = () => {
-        
+        props.onLogout(false);
         sessionStorage.clear();
     }
   

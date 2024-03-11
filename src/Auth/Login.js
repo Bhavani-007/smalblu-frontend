@@ -6,8 +6,8 @@ import './Auth.css';
 
 import axios from 'axios';
 
-const Login = ({ }) => {
-    const navigate = useNavigate(); 
+const Login = ({ onLogin }) => {
+  const navigate = useNavigate(); 
   const [logInEmail, setlogInEmail] = useState('');
   const [logInPassword, setLogInPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -20,6 +20,10 @@ const Login = ({ }) => {
     setLogInPassword(event.target.value);
   }
 
+  const handleCallback = () => {
+    console.log('login successful');
+    onLogin(true);
+  }
 
 
 const onSubmitSignIn = async () => {
@@ -47,6 +51,7 @@ const onSubmitSignIn = async () => {
       }
         
       console.log('login resulting values are set')
+      handleCallback();
 
     navigate('/')
       
